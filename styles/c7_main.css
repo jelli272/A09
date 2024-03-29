@@ -124,3 +124,26 @@ footer p {
 	color: white;
 	padding: 1em 0;
 }
+
+/* Styles for Navigation Menu */
+nav#nav_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav#nav_menu li {
+    float: left;
+}
+
+nav#nav_menu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #800000;
+}
+
+nav#nav_menu li a.current {
+    background-color: yellow;
+}
