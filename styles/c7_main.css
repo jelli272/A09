@@ -127,8 +127,8 @@ footer p {
 
 /* CSS for Navigation Menu */
 nav#nav_menu {
-    width: 100%; /* Stretch the navigation across the whole page */
-    background-color: #931420;
+    width: 100%; /* Stretch the navigation across the entire page */
+    background-color: #931420; /* Set the background color to dark red */
 }
 
 nav#nav_menu ul {
@@ -145,10 +145,7 @@ nav#nav_menu li a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
-    color: #FF0000;
+    color: #fff; /* Set the text color to white */
 }
 
-nav#nav_menu li a.current {
-    background-color: yellow; /* Highlight the current page */
-}
 
