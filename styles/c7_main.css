@@ -128,48 +128,52 @@ footer p {
 	padding: 1em 0;
 }
 
-/* CSS for Navigation Menu */
+/* Styles for Navigation Menu */
 nav#nav_menu {
-    width: 100%; /* Stretch the navigation across the entire page */
-    background-color: #931420; /* Set the background color to dark red */
+    position: relative;
 }
 
-/* Style rule for the submenu */
-.submenu {
-    display: none; /* Hide submenu by default */
-    position: absolute; /* Position submenu absolutely */
-    top: 100%; /* Position 100% from the top of the parent menu item */
+nav#nav_menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-/* Style rule for list items in the submenu */
-.submenu li {
-    float: none; /* Disable floating to display vertically */
+nav#nav_menu ul ul {
+    display: none; /* Hide the submenu by default */
+    position: absolute;
+    top: 100%; /* Position the submenu 100% from the top of the main menu */
+    left: 0;
 }
 
-/* Style rule to display submenu as block when hovering over parent menu item */
-nav#nav_menu li:hover .submenu {
+nav#nav_menu ul ul li {
+    float: none; /* Prevent list items in the submenu from floating */
+}
+
+nav#nav_menu ul li {
+    float: left;
+    position: relative; /* Ensure relative positioning for submenu */
+}
+
+nav#nav_menu li a {
     display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #800000;
 }
 
-/* Style rule for ::after pseudo-element of navigation menu */
+nav#nav_menu li a.current {
+    background-color: yellow;
+}
+
+nav#nav_menu ul li:hover > ul {
+    display: block; /* Display the submenu as a block element */
+}
+
 nav#nav_menu::after {
-    content: ""; /* Add empty content */
-    display: block; /* Display as block element */
-    clear: both; /* Clear floats */
+    content: "";
+    display: block;
+    clear: both;
 }
-nav {
-	clear: both;
-}
-nav ul {
-	list-style: none;
-	padding: 1em 0;       /* padding above and below li elements */
-	background-color: #800000; }
-nav li {
-	display: inline; }
-nav a {
-	padding: 1em 2em;
-	text-decoration: none;
-	color: #fffded;
-	font-weight: bold;
-	border-right: 2px solid #fffded; }
-nav a.current { color: yellow; }
+
