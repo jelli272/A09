@@ -130,14 +130,30 @@ footer p {
 
 }
 /* Styles for Navigation Menu */
+nav#nav_menu {
+    position: relative;
+}
+
 nav#nav_menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav#nav_menu li {
+nav#nav_menu ul ul {
+    display: none; /* Hide the submenu by default */
+    position: absolute;
+    top: 100%; /* Position the submenu 100% from the top of the main menu */
+    left: 0;
+}
+
+nav#nav_menu ul ul li {
+    float: none; /* Prevent list items in the submenu from floating */
+}
+
+nav#nav_menu ul li {
     float: left;
+    position: relative; /* Ensure relative positioning for submenu */
 }
 
 nav#nav_menu li a {
@@ -151,3 +167,14 @@ nav#nav_menu li a {
 nav#nav_menu li a.current {
     background-color: yellow;
 }
+
+nav#nav_menu ul li:hover > ul {
+    display: block; /* Display the submenu as a block element */
+}
+
+nav#nav_menu::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
