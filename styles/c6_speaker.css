@@ -129,7 +129,29 @@ nav#nav_menu {
     width: 100%; /* Stretch the navigation across the entire page */
     background-color: #931420; /* Set the background color to dark red */
 }
+/* Style rule for the submenu */
+.submenu {
+    display: none; /* Hide submenu by default */
+    position: absolute; /* Position submenu absolutely */
+    top: 100%; /* Position 100% from the top of the parent menu item */
+}
 
+/* Style rule for list items in the submenu */
+.submenu li {
+    float: none; /* Disable floating to display vertically */
+}
+
+/* Style rule to display submenu as block when hovering over parent menu item */
+nav#nav_menu li:hover .submenu {
+    display: block;
+}
+
+/* Style rule for ::after pseudo-element of navigation menu */
+nav#nav_menu::after {
+    content: ""; /* Add empty content */
+    display: block; /* Display as block element */
+    clear: both; /* Clear floats */
+}
 /* Styles for Navigation Menu */
 nav#nav_menu ul {
     list-style: none;
