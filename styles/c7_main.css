@@ -131,6 +131,7 @@ footer p {
 /* Styles for Navigation Menu */
 nav#nav_menu {
     position: relative;
+    width: 100%;
 }
 
 nav#nav_menu ul {
