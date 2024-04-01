@@ -99,7 +99,7 @@ article img {
 
 /* the styles for the aside */
 aside {
-	width: 21px;
+	width: 215px;
 	float: right;
 	padding: 0 0 20px 20px;
 }
@@ -131,7 +131,7 @@ footer p {
 /* Styles for Navigation Menu */
 nav#nav_menu {
     position: relative;
-    width: 60%;
+    width: 100%;
 }
 
 nav#nav_menu ul {
@@ -145,6 +145,7 @@ nav#nav_menu ul ul {
     position: absolute;
     top: 100%; /* Position the submenu 100% from the top of the main menu */
     left: 0;
+    width: 100%; /* Set the width of the submenu to 100% */
 }
 
 nav#nav_menu ul ul li {
@@ -177,4 +178,5 @@ nav#nav_menu::after {
     display: block;
     clear: both;
 }
+
 
